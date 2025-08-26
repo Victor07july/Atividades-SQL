@@ -124,7 +124,7 @@ FROM funcionarios
 WHERE status_ativo = 1;
 ```
 
-**🎯 Resultado esperado:** 8 funcionários ativos, média ~R$ 5.662  
+**🎯 Resultado esperado:** 8 funcionários ativos, média, maior salário e menor salário
 **💡 Ensinar:** Funções agregadas (COUNT, AVG, MAX, MIN), alias com AS
 
 ---

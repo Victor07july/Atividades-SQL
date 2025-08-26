@@ -27,7 +27,7 @@ Praticar consultas SQL básicas utilizando a linguagem de consulta em um banco d
 ### 📤 **Passo 3: Entrega no GitHub**
 
 1. Salve o arquivo `2_atividades.sql` com suas respostas
-2. Adicione o arquivo na pasta seu repositório GitHub clonado em seu computador (criado anteriormente na Tarefa 1)
+2. Adicione o arquivo na pasta do seu repositório GitHub clonado em seu computador (criado anteriormente na Tarefa 1)
 3. Faça o commit com a mensagem:
    ```
    Entrega da atividade 3: query de dados sql

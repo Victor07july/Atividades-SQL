@@ -19,8 +19,8 @@ SELECT email, telefone, renda_mensal FROM clientes;
 ## **Atividade 2: Filtros Simples com WHERE**
 #########################################
 
--- 1. Liste todos os clientes do estado de São Paulo (SP)
-SELECT * FROM clientes WHERE estado = 'SP';
+-- 1. Liste todos os clientes do estado de Arizona
+SELECT * FROM clientes WHERE estado = 'Arizona';
 
 -- 2. Exiba clientes com renda mensal maior que R$ 4.000,00
 SELECT * FROM clientes WHERE renda_mensal > 4000.00;
@@ -62,16 +62,16 @@ SELECT * FROM clientes WHERE status_cliente != 'Inativo';
 ## **Atividade 4: Filtros Combinados (AND/OR)**
 #########################################
 
--- 1. Clientes do gênero 'Masculino' E do estado 'RJ'
-SELECT * FROM clientes WHERE genero = 'Masculino' AND estado = 'RJ';
+-- 1. Clientes do gênero 'Masculino' E do estado 'Texas'
+SELECT * FROM clientes WHERE genero = 'Masculino' AND estado = 'Texas';
 
 -- 2. Clientes com renda maior que R$ 4.000 E status 'Ativo'
 SELECT * FROM clientes WHERE renda_mensal > 4000.00 AND status_cliente = 'Ativo';
 
--- 3. Clientes do estado 'SP' OU 'RJ'
-SELECT * FROM clientes WHERE estado = 'SP' OR estado = 'RJ';
+-- 3. Clientes do estado 'Arizona' OU 'New York'
+SELECT * FROM clientes WHERE estado = 'Arizona' OR estado = 'New York';
 -- ou usando IN
-SELECT * FROM clientes WHERE estado IN ('SP', 'RJ');
+SELECT * FROM clientes WHERE estado IN ('Arizona', 'New York');
 
 -- 4. Clientes com renda menor que R$ 3.000 OU maior que R$ 8.000
 SELECT * FROM clientes WHERE renda_mensal < 3000.00 OR renda_mensal > 8000.00;
@@ -79,8 +79,8 @@ SELECT * FROM clientes WHERE renda_mensal < 3000.00 OR renda_mensal > 8000.00;
 -- 5. Clientes mulheres OU com renda acima de R$ 6.000
 SELECT * FROM clientes WHERE genero = 'Feminino' OR renda_mensal > 6000.00;
 
--- 6. Clientes ativos E (do Rio de Janeiro OU São Paulo)
-SELECT * FROM clientes WHERE status_cliente = 'Ativo' AND (estado = 'RJ' OR estado = 'SP');
+-- 6. Clientes ativos E (do estado de Texas OU New York)
+SELECT * FROM clientes WHERE status_cliente = 'Ativo' AND (estado = 'Texas' OR estado = 'New York');
 
 #########################################
 ## **Atividade 5: Ordenação com ORDER BY**
