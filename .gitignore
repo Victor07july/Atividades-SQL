@@ -1,0 +1,3 @@
+# Ignore the answer key file in this folder only
+/3_gabarito.sql
+/mysql_gabarito.md
