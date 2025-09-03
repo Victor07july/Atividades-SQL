@@ -6,7 +6,7 @@ Praticar consultas SQL básicas utilizando a linguagem de consulta em um banco d
 
 ## ⏰ Prazo de Entrega
 
-**Data limite: 3 de setembro de 2024 (próxima semana)**
+**Data limite: 17 de setembro de 2024**
 
 ---
 
