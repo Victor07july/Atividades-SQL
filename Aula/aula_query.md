@@ -102,8 +102,7 @@ ORDER BY salario DESC;
 -- Funcionários ativos dos departamentos TI ou Vendas
 SELECT nome, departamento, cargo, status_ativo
 FROM funcionarios
-WHERE status_ativo = 1
-  AND (departamento = 'TI' OR departamento = 'Vendas');
+WHERE status_ativo = 1 AND (departamento = 'TI' OR departamento = 'Vendas');
 ```
 
 **🎯 Resultado esperado:** Ana Silva, Carlos Santos, João Costa e Fernanda Rocha  
@@ -116,12 +115,12 @@ WHERE status_ativo = 1
 ```sql
 -- Quantos funcionários ativos temos e qual a média salarial?
 SELECT
-    COUNT(*) as total_funcionarios_ativos,
-    AVG(salario) as salario_medio,
-    MAX(salario) as maior_salario,
-    MIN(salario) as menor_salario
+    COUNT(*) as total_funcionarios_ativos, -- COUNT conta todas as linhas 
+    AVG(salario) as salario_medio, -- AVG calcula a média de todas as linhas da coluna selecionada
+    MAX(salario) as maior_salario, -- MAX busca apenas a linha com o maior valor da coluna selecionada
+    MIN(salario) as menor_salario  -- MIN busca apenas a linha com o menor valor da coluna selecionada
 FROM funcionarios
-WHERE status_ativo = 1;
+WHERE status_ativo = 1; -- Limita os resultados para apenas os que tem status_ativo = 1
 ```
 
 **🎯 Resultado esperado:** 8 funcionários ativos, média, maior salário e menor salário
