@@ -6,7 +6,7 @@ Praticar consultas SQL básicas utilizando a linguagem de consulta em um banco d
 
 ## ⏰ Prazo de Entrega
 
-**Data limite: 24 de setembro de 2024**
+**Data limite: 17 de setembro de 2024**
 
 ---
 
@@ -139,20 +139,6 @@ Praticar consultas SQL básicas utilizando a linguagem de consulta em um banco d
 - Agrupar por múltiplas colunas
 
 **Conceitos:** `GROUP BY`, `HAVING`, diferença entre `WHERE` e `HAVING`, agrupamento múltiplo
-
----
-
-### 🔹 **Atividade 6: Funções Estatísticas (4 exercícios)**
-
-**Objetivo:** Usar funções agregadas para análise de dados
-
-- Calcular médias (`AVG`)
-- Encontrar valores máximos (`MAX`)
-- Encontrar valores mínimos (`MIN`)
-- Contar registros (`COUNT`)
-- Combinar funções com filtros complexos
-
-**Conceitos:** `AVG()`, `MAX()`, `MIN()`, `COUNT()`, funções agregadas
 
 ---
 
