@@ -6,7 +6,7 @@ Praticar consultas SQL básicas utilizando a linguagem de consulta em um banco d
 
 ## ⏰ Prazo de Entrega
 
-**Data limite: 17 de setembro de 2024**
+**Data limite: 24 de setembro de 2024**
 
 ---
 
@@ -36,7 +36,7 @@ Praticar consultas SQL básicas utilizando a linguagem de consulta em um banco d
 
 ---
 
-## 📚 Explicação das 6 Atividades
+## 📚 Explicação das 8 Atividades
 
 ### 🔹 **Atividade 1: Consultas Básicas (4 exercícios)**
 
@@ -100,16 +100,59 @@ Praticar consultas SQL básicas utilizando a linguagem de consulta em um banco d
 
 ---
 
-### 🔹 **Atividade 6: Funções Estatísticas (3 exercícios)**
+### 🔹 **Atividade 6: Funções Estatísticas (4 exercícios)**
 
 **Objetivo:** Usar funções agregadas para análise de dados
 
 - Calcular médias (`AVG`)
 - Encontrar valores máximos (`MAX`)
 - Encontrar valores mínimos (`MIN`)
+- Contar registros (`COUNT`)
 - Combinar funções com filtros complexos
 
-**Conceitos:** `AVG()`, `MAX()`, `MIN()`, funções agregadas
+**Conceitos:** `AVG()`, `MAX()`, `MIN()`, `COUNT()`, funções agregadas
+
+---
+
+### 🔹 **Atividade 7: DISTINCT (6 exercícios)**
+
+**Objetivo:** Eliminar duplicatas e obter valores únicos
+
+- Listar valores únicos de colunas
+- Combinar `DISTINCT` com filtros
+- Obter combinações únicas de múltiplas colunas
+- Trabalhar com funções de data (`YEAR()`)
+
+**Conceitos:** `DISTINCT`, eliminação de duplicatas, valores únicos
+
+---
+
+### 🔹 **Atividade 8: GROUP BY e HAVING (8 exercícios)**
+
+**Objetivo:** Agrupar dados e aplicar filtros em grupos
+
+- Agrupar dados por campos (`GROUP BY`)
+- Contar registros por grupo
+- Calcular médias por grupo
+- Filtrar grupos com `HAVING`
+- Combinar agrupamento com ordenação
+- Agrupar por múltiplas colunas
+
+**Conceitos:** `GROUP BY`, `HAVING`, diferença entre `WHERE` e `HAVING`, agrupamento múltiplo
+
+---
+
+### 🔹 **Atividade 6: Funções Estatísticas (4 exercícios)**
+
+**Objetivo:** Usar funções agregadas para análise de dados
+
+- Calcular médias (`AVG`)
+- Encontrar valores máximos (`MAX`)
+- Encontrar valores mínimos (`MIN`)
+- Contar registros (`COUNT`)
+- Combinar funções com filtros complexos
+
+**Conceitos:** `AVG()`, `MAX()`, `MIN()`, `COUNT()`, funções agregadas
 
 ---
 
@@ -136,17 +179,17 @@ Praticar consultas SQL básicas utilizando a linguagem de consulta em um banco d
 - `sobrenome` - Sobrenome do cliente
 - `email` - Email do cliente
 - `telefone` - Telefone do cliente
-- `data_nascimento` - Data de nascimento
-- `genero` - Gênero (Male/Female)
+- `data_nasc` - Data de nascimento
+- `genero` - Gênero (Male/Female/Agender/Genderfluid/etc.)
 - `cidade` - Cidade onde mora
 - `estado` - Estado onde mora
 - `renda_mensal` - Renda mensal em reais
-- `status` - Status (Ativo/Inativo)
+- `status_cliente` - Status (Ativo/Inativo)
 
 ---
 
 ## 📊 Total de Exercícios
 
-**28 exercícios** distribuídos em 6 atividades progressivas, do básico ao avançado.
+**42 exercícios** distribuídos em 8 atividades progressivas, do básico ao avançado.
 
 **Boa sorte! 🍀**
