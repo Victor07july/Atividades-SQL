@@ -1,6 +1,6 @@
 USE exercicio_sql;
 
-# Ao terminar a atividade, adicione este arquivo em seu repositório GitHub criado na última aula.
+# Ao terminar a atividade, adicione este arquivo em seu repositório GitHub.
 
 #########################################
 ## **Atividade 1: Consultas Básicas**
@@ -88,3 +88,39 @@ USE exercicio_sql;
 -- 3. Menor salário dos funcionários inativos que moram em New York e são do gênero feminino
 
 -- 4. Conte quantos funcionários estão inativos, são do gênero feminino e moram em Louisiana
+
+
+#########################################
+## **Atividade 7: DISTINCT**
+#########################################
+
+-- 1. Liste todos os estados únicos dos clientes (sem repetições)
+
+-- 2. Exiba as cidades únicas dos clientes do estado de Texas
+
+-- 3. Mostre os gêneros únicos presentes na tabela de clientes
+
+-- 4. Liste os status únicos dos clientes
+
+-- 5. Exiba as combinações únicas de estado e cidade dos clientes
+
+-- 6. Mostre os anos únicos de nascimento dos clientes (use YEAR(data_nasc))
+
+#########################################
+## **Atividade 8: GROUP BY e HAVING**
+#########################################
+
+
+-- 1. Mostre os estados que têm mais de 10 clientes (use HAVING)
+
+-- 2. Exiba a renda média por estado dos clientes, apenas para estados com mais de 5 clientes
+
+-- 3. Liste os gêneros e a quantidade de clientes por gênero, mas apenas gêneros com mais de 30 clientes
+
+-- 4. Mostre as cidades e o número de clientes por cidade, ordenado pela quantidade (maior para menor)
+
+-- 5. Encontre os estados com renda média dos clientes superior a R$ 8.000,00
+
+-- 6. Conte quantos clientes ativos e inativos existem por gênero
+
+-- 7. Exiba os anos de nascimento com mais de 15 clientes nascidos naquele ano
