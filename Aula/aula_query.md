@@ -46,11 +46,6 @@ INSERT INTO funcionarios VALUES
 
 ### Verificar os dados inseridos:
 
-```sql
--- Ver todos os dados da tabela
-SELECT * FROM funcionarios;
-```
-
 ---
 
 ## 🚀 **5 EXEMPLOS PRÁTICOS PARA DEMONSTRAÇÃO**
@@ -62,18 +57,22 @@ SELECT * FROM funcionarios;
 SELECT * FROM funcionarios;
 ```
 
-**🎯 Resultado esperado:** 10 registros com todos os campos  
+```sql
+-- Mostrar somente determinadas colunas
+SELECT nome, departamento FROM funcionarios;
+```
+
 **💡 Ensinar:** Estrutura básica do SELECT, uso do asterisco (\*)
 
 ---
 
-### 👥 **Exemplo 2: Filtro Simples - Funcionários de TI**
+### 👥 **Exemplo 2: Filtro Simples - Funcionários de Vendas**
 
 ```sql
 -- Mostrar apenas funcionários do departamento de TI
 SELECT nome, cargo, salario, departamento
 FROM funcionarios
-WHERE departamento = 'TI';
+WHERE departamento = 'Vendas';
 ```
 
 **🎯 Resultado esperado:** Ana Silva, João Costa e Fernanda Rocha  
@@ -96,17 +95,32 @@ ORDER BY salario DESC;
 
 ---
 
-### 🔍 **Exemplo 4: Filtros Combinados - Ativos de TI ou Vendas**
+### 🔍 **Exemplo 4: Filtros Combinados**
 
 ```sql
--- Funcionários ativos dos departamentos TI ou Vendas
+-- Funcionários ativos do departamento de Vendas
+SELECT nome, departamento, cargo, status_ativo
+FROM funcionarios
+WHERE status_ativo = 1 AND departamento = 'Vendas';
+```
+
+```sql
+-- Funcionários inativos OU com salário acima de 5000
+SELECT nome, departamento, cargo, status_ativo, salario
+FROM funcionarios
+WHERE status_ativo = 0 OR salario > 5000;
+```
+
+```sql
+-- E se eu quiser verificar funcionários ativos onde departamento seja ou de TI ou de Vendas?
 SELECT nome, departamento, cargo, status_ativo
 FROM funcionarios
 WHERE status_ativo = 1 AND (departamento = 'TI' OR departamento = 'Vendas');
 ```
 
-**🎯 Resultado esperado:** Ana Silva, Carlos Santos, João Costa e Fernanda Rocha  
-**💡 Ensinar:** Operadores lógicos AND/OR, uso de parênteses, valores booleanos
+O AND tem procedência sobre o OR, então, caso queira que ele priorize o OR, é necessário colocar a operação em seu redor entre parênteses
+
+**💡 Ensinar:** Operadores lógicos AND/OR, uso de parênteses
 
 ---
 
@@ -115,7 +129,7 @@ WHERE status_ativo = 1 AND (departamento = 'TI' OR departamento = 'Vendas');
 ```sql
 -- Quantos funcionários ativos temos e qual a média salarial?
 SELECT
-    COUNT(*) as total_funcionarios_ativos, -- COUNT conta todas as linhas 
+    COUNT(*) as total_funcionarios_ativos, -- COUNT conta todas as linhas
     AVG(salario) as salario_medio, -- AVG calcula a média de todas as linhas da coluna selecionada
     MAX(salario) as maior_salario, -- MAX busca apenas a linha com o maior valor da coluna selecionada
     MIN(salario) as menor_salario  -- MIN busca apenas a linha com o menor valor da coluna selecionada
@@ -127,3 +141,47 @@ WHERE status_ativo = 1; -- Limita os resultados para apenas os que tem status_at
 **💡 Ensinar:** Funções agregadas (COUNT, AVG, MAX, MIN), alias com AS
 
 ---
+
+### 🔍 **Exemplo 6: DISTINCT - Valores Únicos**
+
+```sql
+-- Quais departamentos únicos existem na empresa?
+SELECT DISTINCT departamento
+FROM funcionarios
+ORDER BY departamento;
+```
+
+```sql
+-- Quantos departamentos únicos temos?
+SELECT COUNT(DISTINCT departamento) as total_departamentos
+FROM funcionarios;
+```
+
+**🎯 Resultado esperado:** 6 departamentos únicos  
+**💡 Ensinar:** Combinação de COUNT com DISTINCT
+
+---
+
+### 📈 **Exemplo 7: GROUP BY e HAVING - Análise por Departamento**
+
+GROUP BY agrupa as colunas de mesmo valor, criando um grupo para cada
+
+```sql
+SELECT departamento
+FROM funcionarios
+GROUP BY departamento;
+```
+
+
+```sql
+-- Departamentos com mais de  um funcionário
+SELECT
+    departamento,
+    COUNT(*) as total_funcionarios
+FROM funcionarios
+GROUP BY departamento -- Agrupa as linhas com o mesmo valor
+HAVING COUNT(*) > 1;  -- HAVING filtra grupos (depois do GROUP BY)
+```
+
+**🎯 Resultado esperado:** TI e Vendas (únicos departamentos com mais de 1 funcionário)  
+**💡 Ensinar:** GROUP BY agrupa dados, HAVING filtra grupos (diferente do WHERE)
