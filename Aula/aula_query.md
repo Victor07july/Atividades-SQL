@@ -111,7 +111,7 @@ WHERE status_ativo = 1 AND departamento = 'Vendas';
 SELECT nome, departamento, cargo, status_ativo, salario
 FROM funcionarios
 WHERE status_ativo = 0 OR salario > 5000;
--- OR -> precisa atender somente um dos critérios
+-- OR -> precisa atender pelo menos um dos critérios
 ```
 
 ```sql
@@ -174,7 +174,6 @@ SELECT departamento
 FROM funcionarios
 GROUP BY departamento;
 ```
-
 
 ```sql
 -- Departamentos com mais de  um funcionário
