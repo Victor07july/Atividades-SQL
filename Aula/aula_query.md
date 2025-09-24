@@ -102,6 +102,8 @@ ORDER BY salario DESC;
 SELECT nome, departamento, cargo, status_ativo
 FROM funcionarios
 WHERE status_ativo = 1 AND departamento = 'Vendas';
+
+-- AND -> precisa atender todos os critérios
 ```
 
 ```sql
@@ -109,6 +111,7 @@ WHERE status_ativo = 1 AND departamento = 'Vendas';
 SELECT nome, departamento, cargo, status_ativo, salario
 FROM funcionarios
 WHERE status_ativo = 0 OR salario > 5000;
+-- OR -> precisa atender somente um dos critérios
 ```
 
 ```sql
